@@ -24,6 +24,12 @@ body {
   font-family: "Source Sans Pro";
 }
 
+main {
+  margin: auto 3vw auto 3vw;
+  background-color: #f4f1ec;
+
+}
+
 
 
 /*

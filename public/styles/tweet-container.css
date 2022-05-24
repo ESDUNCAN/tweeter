@@ -1,0 +1,24 @@
+/* .tweet-container {
+  display: flex;
+  position: absolute;
+} */
+
+.tweet {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+}
+
+.tweet:hover {
+  box-shadow: 4px 4px black;
+}
+
+.emojis {
+  color: red;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}

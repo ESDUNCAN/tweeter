@@ -14,7 +14,7 @@
 .counter {
   display: flex;
   position: absolute;
-  right: 100px;
+  right: 50px;
 }
 
 #tweet-text {

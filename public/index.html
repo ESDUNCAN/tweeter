@@ -20,12 +20,15 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -53,14 +56,38 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form>
-        <label for="tweet-text">What are you humming about?</label>
+      <form class="tweet-box" action='/tweets/' method='post'>
+        <label class="label" for="tweet-text"> <strong>What are you humming about?</strong></label>
+        <br>
         <textarea name="text" id="tweet-text"></textarea>
-        <div>
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+        <div class="button-and-counter">
+          <button class="button" type="button">
+            Tweet
+          </button>
+          <output class="counter" name="counter" for="tweet-text"><strong>140</strong></output>
         </div>
       </form>
+      <div class="tweet-container">
+        <span>
+          <article class="tweet">
+            <div class="user-username">
+              <div>USER</div>
+              <div>@USERNAME</div>
+            </div>
+            <section>
+              This is a Tweet This is a Tweet This is a Tweet This is a Tweet This is a Tweet This is a Tweet This is a
+              Tweet This is a Tweet
+            </section>
+            <footer> <span> X DAYS AGO </span>
+              <div class="emojis">
+                <i class="fa-solid fa-flag" id="flag-emoji"></i>
+                <i class="fa-solid fa-retweet" id="retweet-emoji"></i>
+                <i class="fa-solid fa-heart" id="heart-emoji"></i>
+              </div>
+            </footer>
+          </article>
+        </span>
+      </div>
     </section>
   </main>
 

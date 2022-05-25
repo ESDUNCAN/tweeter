@@ -15,6 +15,19 @@
 
 .emojis {
   color: red;
+  box-shadow: 2px 2px black;
+}
+
+#flag-emoji:hover {
+  color: blue
+}
+
+#retweet-emoji:hover {
+  color: blue
+}
+
+#heart-emoji:hover {
+  color: blue
 }
 
 article.tweet footer {
@@ -22,3 +35,21 @@ article.tweet footer {
   justify-content: space-between;
   border-top: 1px solid black;
 }
+
+.user-username {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+/* .user {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.username {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+} */

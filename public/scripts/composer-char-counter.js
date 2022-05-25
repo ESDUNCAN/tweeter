@@ -3,6 +3,7 @@ $(document).ready(function () {
 });
 
 const onChange = function () {
+  console.log(this)
   const $textArea = $(this)
   const text = $textArea.val()
   const length = text.length

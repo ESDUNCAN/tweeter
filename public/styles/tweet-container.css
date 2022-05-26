@@ -1,12 +1,10 @@
-/* .tweet-container {
-  display: flex;
-  position: absolute;
-} */
-
 .tweet {
   display: flex;
   border: 1px solid black;
   flex-direction: column;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .tweet:hover {
@@ -42,14 +40,9 @@ article.tweet footer {
   justify-content: space-between;
 }
 
-
-/* .user {
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.username {
+.avatar-username {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-} */
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}

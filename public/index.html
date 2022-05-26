@@ -25,10 +25,13 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <!-- <script type="text/javascript" src="/node_modules/timeago.js"></script> -->
+
 </head>
 
 <body>
@@ -55,13 +58,18 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form class="tweet-box" action='/tweets/' method='post'>
+      <br>
+      <div class="error-messages-div">
+        <span class="error-messages"></span>
+        <span class="error-messages-icon"></span>
+      </div>
+      <br>
+      <form class="tweet-box">
         <label class="label" for="tweet-text"> <strong>What are you humming about?</strong></label>
         <br>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="button-and-counter">
-          <button class="button" type="button">
+          <button class="button" type="submit">
             Tweet
           </button>
           <output class="counter" name="counter" for="tweet-text"><strong>140</strong></output>

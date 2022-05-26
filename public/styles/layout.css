@@ -13,11 +13,9 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -27,15 +25,19 @@ body {
 main {
   margin: auto 3vw auto 3vw;
   background-color: #f4f1ec;
-
+  width: 100%;
 }
 
 .red {
   color: red
 }
 
+@media (min-width:1024px) {
+  body {
+    flex-direction: row;
+    display: flex;
+    padding-top: 100px;
 
+  }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+}

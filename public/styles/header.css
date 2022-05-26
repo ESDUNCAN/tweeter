@@ -10,10 +10,8 @@
   margin-top: 120px;
 }
 
-/* .name {
-  position: fixed;
-  left: 50%;
-  bottom: 400px;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-} */
+@media (min-width:1024px) {
+  .profile {
+    width: 40%;
+  }
+}

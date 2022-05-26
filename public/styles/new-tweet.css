@@ -11,11 +11,7 @@
   color: #383232;
 }
 
-.counter {
-  display: flex;
-  position: absolute;
-  right: 50px;
-}
+
 
 #tweet-text {
   border-bottom: 4px solid black;
@@ -29,6 +25,20 @@
 
 .button-and-counter {
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.error-messages-div {
+  display: visible;
+}
+
+.error-messages {
+  color: red;
+  font-weight: 1000;
+}
+
+.error-messages-visible {
+  display: visible;
+  border: 2px solid red;
 }

@@ -13,19 +13,18 @@
 
 .emojis {
   color: red;
-  box-shadow: 2px 2px black;
 }
 
 #flag-emoji:hover {
-  color: blue
+  color: blue;
 }
 
 #retweet-emoji:hover {
-  color: blue
+  color: blue;
 }
 
 #heart-emoji:hover {
-  color: blue
+  color: blue;
 }
 
 article.tweet footer {

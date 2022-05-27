@@ -23,9 +23,10 @@ body {
 }
 
 main {
-  margin: auto 3vw auto 3vw;
   background-color: #f4f1ec;
   width: 100%;
+  align-items: center;
+
 }
 
 .red {
@@ -37,7 +38,9 @@ main {
     flex-direction: row;
     display: flex;
     padding-top: 100px;
-
   }
 
+  main {
+    margin: auto 2vw auto 2vw;
+  }
 }

@@ -6,10 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Scrrenshot of Homepage Tablet View"] (https://github.com/ESDUNCAN/tweeter/blob/master/docs/tweeter%20-%20tablet%20view%20.png?raw=true)
-!["Scrrenshot of Homepage on Webview"] (https://github.com/ESDUNCAN/tweeter/blob/master/docs/tweeter-homepage%20.png?raw=true)
+!["Screenshot of Homepage Tablet View"](https://github.com/ESDUNCAN/tweeter/blob/master/docs/tweeter%20-%20tablet%20view%20.png?raw=true)
 
-
+!["Screenshot of Homepage on Webview"](https://github.com/ESDUNCAN/tweeter/blob/master/docs/tweeter-homepage%20.png?raw=true)
 
 ## Getting Started
 

@@ -6,31 +6,6 @@
 
 // Fake data taken from initial-tweets.json
 $(function () {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
   const escape = function (str) {
     let div = document.createElement("div");
@@ -87,7 +62,10 @@ $(function () {
         .then(() => {
           loadTweets();
           errorMessage.text("");
-        });
+          $textArea.val("")
+        })
+        .catch(() =>
+          errorMessage.text("Sorry the server failed, please re-submit your tweet"));
     } else if (remaining === 140) {
       errorMessage.text("⚠️ Cannot Tweet an empty box. Please submit a message under 140 characters ⚠️");
     } else if (remaining < 0) {
@@ -99,7 +77,6 @@ $(function () {
       renderTweets(data);
     });
   };
-
-  renderTweets(data);
+  loadTweets()
 });
 

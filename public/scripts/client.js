@@ -49,7 +49,6 @@ $(function () {
 
   $('form').submit(function (event) {
     event.preventDefault();
-    const data = $(this).serialize();
 
     const $textArea = $("#tweet-text");
     const text = $textArea.val();
@@ -57,21 +56,28 @@ $(function () {
     const remaining = (140 - length);
     const errorMessage = $(".error-messages");
 
-    if (remaining >= 0 && remaining < 140) {
-      $.ajax('/tweets', { method: 'POST', data })
-        .then(() => {
-          loadTweets();
-          errorMessage.text("");
-          $textArea.val("")
-        })
-        .catch(() =>
-          errorMessage.text("Sorry the server failed, please re-submit your tweet"));
-    } else if (remaining === 140) {
+    if (!remaining) {
       errorMessage.text("⚠️ Cannot Tweet an empty box. Please submit a message under 140 characters ⚠️");
-    } else if (remaining < 0) {
+      return
+    }
+
+    if (remaining <= 0) {
       errorMessage.text("⚠️ Message exceeds length, please reduce message to 140 characters or less ⚠️");
-    };
-  });
+      return
+    }
+
+    const data = $(this).serialize()
+
+    $.post('/tweets', data)
+      .then(() => {
+        loadTweets();
+        errorMessage.text("");
+        $textArea.val("").trigger("input")
+      })
+      .catch(() =>
+        errorMessage.text("Sorry the server failed, please re-submit your tweet"));
+  }
+  );
   const loadTweets = function (tweet) {
     $.get("./tweets", function (data) {
       renderTweets(data);
